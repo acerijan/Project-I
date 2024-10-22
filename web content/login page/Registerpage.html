@@ -37,11 +37,11 @@
                 </div>
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="number" placeholder="Account No." required>
+                    <input type="number" pattern="[0-9]{11}" min="00000000000" placeholder="Account No." required>
                 </div>
                 <div class="input-box">
                     <i class="fas fa-user"></i>
-                    <input type="number" placeholder="Pin" required>
+                    <input type="number" min="0000" max="9999" placeholder="Pin" required>
                 </div>
                 <button type="submit" class="btn">Register</button>
                
