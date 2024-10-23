@@ -1,18 +1,78 @@
-function accountNumberValidate(){
-    var accountNumber = prompt("Enter account number");
+function accountNumberValidate(accNo){
     var accountNumberPattern = /^[0-9]{11}$/;
-    if(accountNumber == null){
-        alert("Account number required");
-        return false;
-        }
-    if(!accountNumber.match(accountNumberPattern)){
+    if(!accNo.match(accountNumberPattern)){
         alert("Invalid account number. Account number should be 11 digits");
         return false;
         }
         return true;
-
-        
 }
+
+function passwordValidate(password){
+    if(password.length < 8 || password.length >15){
+        alert("Password should be between 8-15 characters long.");
+        return false;
+    }
+    return true;
+}
+
+
+function pinValidate(pin){
+    var patt=/^[0-9]{4}$/;
+    if(!pin.match(patt)){
+        alert("Enter 4 digit pin code!!");
+        return false;
+    }return true;
+}
+
+
+function matchPassword(oldPass,newPass){
+    if(oldPass == newPass){
+        return true;
+    }else{
+        alert("please match passwords");
+        return false;
+    }
+            
+
+}
+
+function userIdValidate(userId){
+    var patt=/^[0-9]{10}$/;
+    if(!userId.match(patt)){
+        alert("please enter valid user id");
+        return false;
+    }return true;
+ }
+
+
+
+
+    function addMonths(date, months) {
+        let newDate = new Date(date);
+        newDate.setMonth(newDate.getMonth() + months);
+        return newDate.toISOString().split('T')[0];  // Format as YYYY-MM-DD
+    }
+
+    // Get current date
+    const currentDate = new Date();
+
+    // Add 3 months to current date
+    const threeMonthDate = addMonths(currentDate, 3);
+
+    // Add 6 months to current date
+    const sixMonthDate = addMonths(currentDate, 6);
+
+    // Set the values for the options
+    document.getElementById('threeMonth').value = threeMonthDate;
+    document.getElementById('sixMonth').value = sixMonthDate;
+
+
+
+
+
+
+//****************************************************************************** */
+
 
 function confirmTransaction(confirmTransaction){
     return confirm("Do you want to proceed?");
@@ -40,17 +100,7 @@ function nameValidate(name){
     
 }
 
- function passwordValidate(password){
-    if(password== null ){
-        alert("Password required");
-        return false;
-    } 
-    if(password.length < 8){
-        alert("Password should be at least 8 characters long.");
-        return false;
-    }
-    return true;
-}
+
 
 
 
@@ -66,27 +116,8 @@ function phoneValidate(phone){
     }
     return true;
 }
-function pinCodeValidate(pin){
-    if(pin==null){
-        alert("Pin code required");
-        return false;
-    }
-    if(pin.length!=4){
-        alert("Enter 4 digit pin code!!");
-        return false;
-    }return true;
-}
-function resetPassword(){
-    var newPassword = prompt("Enter new password");
-    var confirmPassword = prompt("Reenter new password");
-    if(newPassword == confirmPassword){
-        alert("Password changed successfully");
-        }else{
-            alert("Passwords do not match");
-            }
-            
 
-}
+
 
 function transactionAmountValidate(amount){
     if(amount == null){
@@ -103,12 +134,7 @@ function transactionAmountValidate(amount){
 
 
 
-function userIdValidate(userId){
-    if(userId== null ){
-        alert("User id required");
-        return false;
-    }return true;
- }
+
 
 function dateValidate(){
     var date = prompt("Enter date in YYYY-MM-DD format");
