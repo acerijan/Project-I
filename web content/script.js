@@ -53,19 +53,8 @@ function userIdValidate(userId){
         return newDate.toISOString().split('T')[0];  // Format as YYYY-MM-DD
     }
 
-    // Get current date
-    const currentDate = new Date();
-
-    // Add 3 months to current date
-    const threeMonthDate = addMonths(currentDate, 3);
-
-    // Add 6 months to current date
-    const sixMonthDate = addMonths(currentDate, 6);
-
-    // Set the values for the options
-    document.getElementById('threeMonth').value = threeMonthDate;
-    document.getElementById('sixMonth').value = sixMonthDate;
-
+    
+    
 
 
 
