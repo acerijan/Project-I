@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #bcbcbc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #409CFF;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-logo span {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+.logout a {
+    color: white;
+    align-content: ;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.container {
+    margin-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.user-icon img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.account-details {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.account-details p {
+    margin-bottom: 5px;
+}
+
+.hide-amount {
+    cursor: pointer;
+}
+
+.actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-item img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.action-item p {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
