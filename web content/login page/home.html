@@ -23,52 +23,107 @@
     <!-- Main container for account info and actions -->
     <div class="container">
         <!-- Account Info -->
-        <div class="account-info">
+        <div class="user-profile">
             <div class="user-icon">
-                <img src="user-icon.png" alt="User Icon">
+                <img src="path-to-your-icon.png" alt="User Icon">
             </div>
-            <div class="account-details">
-                <p>xxxxxxxxxxxx</p>
-                <p>NPR XXX.XX <span class="hide-amount">👁️</span></p>
-                <p>Rijan Maharjan</p>
-            </div>
+            <p class="user-name">Rijan Maharjan</p>
+        </div>
+        
+        <div class="account-details">
+            <p><span id="account-number-display">xxxxxxxxxxxx</span></p>
+            <p>
+                <span id="amount-display">NPR XXX.XX</span>
+                <span class="hide-amount" id="toggle-visibility">👁️</span>
+            </p>
+        </div>
         </div>
 
         <!-- Action Grid -->
         <div class="actions-grid">
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="view-account-icon.png" alt="View Account">
                 <p>View Account</p>
             </div>
+            </a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="transfer-funds-icon.png" alt="Transfer Funds">
                 <p>Transfer Funds</p>
-            </div>
+            </div></a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="wallet-load-icon.png" alt="Wallet Load">
                 <p>Wallet Load</p>
-            </div>
+            </div></a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="calculate-emi-icon.png" alt="Calculate EMI">
                 <p>Calculate EMI</p>
-            </div>
+            </div></a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="customer-care-icon.png" alt="Customer Care">
                 <p>Customer Care</p>
-            </div>
+            </div></a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="deposit-icon.png" alt="Deposit">
                 <p>Deposit</p>
-            </div>
+            </div></a>
             <div class="action-item">
                 <img src="transaction-history-icon.png" alt="Transaction History">
                 <p>Transaction History</p>
-            </div>
+            </div></a>
+            <a href="#" style="text-decoration: none;">
             <div class="action-item">
                 <img src="loan-status-icon.png" alt="Loan Status">
                 <p>Loan Status</p>
-            </div>
+            </div></a>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggle-visibility');
+            const amountDisplay = document.getElementById('amount-display');
+            const accountNumberDisplay = document.getElementById('account-number-display');
+            
+            // Actual values (backend bata haal)
+            const actualAmount = "NPR 50,000.00";
+            const hiddenAmount = "NPR XXX.XX";
+            const actualAccountNumber = "10282000034"; // Replace hanne
+            const hiddenAccountNumber = "xxxxxxxxxxxx";
+            
+            let isHidden = true;
+    
+            toggleButton.addEventListener('click', function() {
+                // Add animation class to both elements
+                amountDisplay.classList.add('animate');
+                accountNumberDisplay.classList.add('animate');
+                
+                setTimeout(() => {
+                    if (isHidden) {
+                        amountDisplay.textContent = actualAmount;
+                        accountNumberDisplay.textContent = actualAccountNumber;
+                        toggleButton.textContent = '🔒';
+                    } else {
+                        amountDisplay.textContent = hiddenAmount;
+                        accountNumberDisplay.textContent = hiddenAccountNumber;
+                        toggleButton.textContent = '👁️';
+                    }
+                    isHidden = !isHidden;
+                }, 200);
+    
+                // Remove animation class after completion
+                setTimeout(() => {
+                    amountDisplay.classList.remove('animate');
+                    accountNumberDisplay.classList.remove('animate');
+                }, 400);
+            });
+    
+            
+        });
+    </script>
 </body>
 </html>
