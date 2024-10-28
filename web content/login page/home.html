@@ -11,12 +11,14 @@
     <header>
         <nav class="navbar">
             <div class="nav-logo">
-                <img src="swift-logo.png" alt="Swift Logo">
+                <img src="swift.jpeg" alt="Swift Logo">
                 <span>Swift Bank</span>
             </div>
             <div class="logout">
-                <a href="#">Logout <img src="logout.jpeg" alt="↪"></a>
+                <a href="#">Logout <img src="logout.jpeg" height="20ox" width="20px" alt="↪"></a>
+                
             </div>
+           
         </nav>
     </header>
 
@@ -34,7 +36,7 @@
             <p><span id="account-number-display">xxxxxxxxxxxx</span></p>
             <p>
                 <span id="amount-display">NPR XXX.XX</span>
-                <span class="hide-amount" id="toggle-visibility"><img src="eyeOff.jpeg" alt="👁️"></span>
+                <span class="hide-amount" id="toggle-visibility"><img src="eyeOff.jpeg" alt="👁️" height="20px" width="20px"></span>
             </p>
         </div>
         </div>
@@ -73,7 +75,7 @@
                 <p>Deposit</p>
             </div></a>
             <div class="action-item">
-                <img src="transferHistoryPage.html" alt="Transaction History">
+                <img src="transferFunds.jpeg" alt="Transaction History">
                 <p>Transaction History</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
@@ -84,7 +86,7 @@
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        
             const toggleButton = document.getElementById('toggle-visibility');
             const amountDisplay = document.getElementById('amount-display');
             const accountNumberDisplay = document.getElementById('account-number-display');
@@ -98,19 +100,16 @@
             let isHidden = true;
     
             toggleButton.addEventListener('click', function() {
-                // Add animation class to both elements
-                amountDisplay.classList.add('animate');
-                accountNumberDisplay.classList.add('animate');
-                
-                
+                              
+                        
                     if (isHidden) {
                         amountDisplay.textContent = actualAmount;
                         accountNumberDisplay.textContent = actualAccountNumber;
-                        toggleButton.textContent = '<img src="eyeOff.jpeg" alt="lock" style="width: 20px; height: 20px;">';
+                        toggleButton.innerHTML = '<img src="eyeOn.jpeg" alt="lock" style="width: 20px; height: 20px;">';
                     } else {
                         amountDisplay.textContent = hiddenAmount;
                         accountNumberDisplay.textContent = hiddenAccountNumber;
-                        toggleButton.textContent = '<img src="eyeOn.jpeg" alt="lock" style="width: 20px; height: 20px;">';
+                        toggleButton.innerHTML = '<img src="eyeOff.jpeg" alt="lock" style="width: 20px; height: 20px;">';
                     }
                     isHidden = !isHidden;
                 
@@ -119,7 +118,7 @@
             });
     
             
-        });
+       
     </script>
 </body>
 </html>
