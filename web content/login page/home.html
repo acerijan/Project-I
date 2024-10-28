@@ -15,7 +15,7 @@
                 <span>Swift Bank</span>
             </div>
             <div class="logout">
-                <a href="#">Logout</a>
+                <a href="#">Logout <img src="logout.jpeg" alt="↪"></a>
             </div>
         </nav>
     </header>
@@ -25,7 +25,7 @@
         <!-- Account Info -->
         <div class="user-profile">
             <div class="user-icon">
-                <img src="path-to-your-icon.png" alt="User Icon">
+                <img src="user.jpeg" alt="User Icon">
             </div>
             <p class="user-name">Rijan Maharjan</p>
         </div>
@@ -34,7 +34,7 @@
             <p><span id="account-number-display">xxxxxxxxxxxx</span></p>
             <p>
                 <span id="amount-display">NPR XXX.XX</span>
-                <span class="hide-amount" id="toggle-visibility">👁️</span>
+                <span class="hide-amount" id="toggle-visibility"><img src="eyeOff.jpeg" alt="👁️"></span>
             </p>
         </div>
         </div>
@@ -43,42 +43,42 @@
         <div class="actions-grid">
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="view-account-icon.png" alt="View Account">
+                <img src="viewAccount.jpeg" alt="View Account">
                 <p>View Account</p>
             </div>
             </a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="transfer-funds-icon.png" alt="Transfer Funds">
+                <img src="transferFunds.jpeg" alt="Transfer Funds">
                 <p>Transfer Funds</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="wallet-load-icon.png" alt="Wallet Load">
+                <img src="walletLoad.jpeg" alt="Wallet Load">
                 <p>Wallet Load</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="calculate-emi-icon.png" alt="Calculate EMI">
+                <img src="calculateEMI.jpeg" alt="Calculate EMI">
                 <p>Calculate EMI</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="customer-care-icon.png" alt="Customer Care">
+                <img src="customerCare.jpeg" alt="Customer Care">
                 <p>Customer Care</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="deposit-icon.png" alt="Deposit">
+                <img src="deposit.jpeg" alt="Deposit">
                 <p>Deposit</p>
             </div></a>
             <div class="action-item">
-                <img src="transaction-history-icon.png" alt="Transaction History">
+                <img src="transferHistoryPage.html" alt="Transaction History">
                 <p>Transaction History</p>
             </div></a>
             <a href="#" style="text-decoration: none;">
             <div class="action-item">
-                <img src="loan-status-icon.png" alt="Loan Status">
+                <img src="loanstatus.jpeg" alt="Loan Status">
                 <p>Loan Status</p>
             </div></a>
         </div>
@@ -102,24 +102,20 @@
                 amountDisplay.classList.add('animate');
                 accountNumberDisplay.classList.add('animate');
                 
-                setTimeout(() => {
+                
                     if (isHidden) {
                         amountDisplay.textContent = actualAmount;
                         accountNumberDisplay.textContent = actualAccountNumber;
-                        toggleButton.textContent = '🔒';
+                        toggleButton.textContent = '<img src="eyeOff.jpeg" alt="lock" style="width: 20px; height: 20px;">';
                     } else {
                         amountDisplay.textContent = hiddenAmount;
                         accountNumberDisplay.textContent = hiddenAccountNumber;
-                        toggleButton.textContent = '👁️';
+                        toggleButton.textContent = '<img src="eyeOn.jpeg" alt="lock" style="width: 20px; height: 20px;">';
                     }
                     isHidden = !isHidden;
-                }, 200);
+                
     
-                // Remove animation class after completion
-                setTimeout(() => {
-                    amountDisplay.classList.remove('animate');
-                    accountNumberDisplay.classList.remove('animate');
-                }, 400);
+                
             });
     
             
