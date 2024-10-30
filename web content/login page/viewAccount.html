@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Bank Dashboard</title>
+    <link rel="stylesheet" href="chilli.css" >
+    <link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Manrope:wght@200..800a">
+    <style>
+            .btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: #409CFF;
+        color: white;
+        height: 50px;;
+    }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar with Swift logo and logout -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="swift.jpeg" alt="Swift Logo">
+                <span>Swift Bank</span>
+            </div>
+            <div class="logout">
+                <a href="#">Logout <img src="logout.jpeg" height="20ox" width="20px" alt="↪"></a>
+                
+            </div>
+           
+        </nav>
+    </header>
+
+    <!-- Main container for account info and actions -->
+    <div class="container">
+        <!-- Account Info -->
+        <div class="user-profile">
+            <div class="user-icon">
+                <img src="user.jpeg" alt="User Icon">
+            </div>
+            <p class="user-name">Rijan Maharjan</p>
+        </div>
+        
+        <div class="account-details">
+            <p><span id="account-number-display">xxxxxxxxxxxx</span></p>
+            <p>
+                <span id="amount-display">NPR XXX.XX</span>
+                <span class="hide-amount" id="toggle-visibility"><img src="eyeOff.jpeg" alt="👁️" height="20px" width="20px"></span>
+            </p>
+        </div>
+        </div>
+        <!-- Container for editing options -->
+
+        <div class="container">
+            <div style="width: 400px; padding: 30px; background-color: #f5f5f5;
+            border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;">
+                <form action="#">
+                    <button type="button" class="btn continue" onclick="changePassword()">Change Password</button>
+                    <br><br>
+                    <button type="button" class="btn continue" onclick="changePin()">Chagne Pin   </button>
+                </form>
+            </div>
+        </div>
+    <script>
+        
+            const toggleButton = document.getElementById('toggle-visibility');
+            const amountDisplay = document.getElementById('amount-display');
+            const accountNumberDisplay = document.getElementById('account-number-display');
+            
+            // Actual values (backend bata haal)
+            const actualAmount = "NPR 50,000.00";
+            const hiddenAmount = "NPR XXX.XX";
+            const actualAccountNumber = "10282000034"; // Replace hanne
+            const hiddenAccountNumber = "xxxxxxxxxxxx";
+            
+            let isHidden = true;
+    
+            toggleButton.addEventListener('click', function() {
+                              
+                        
+                    if (isHidden) {
+                        amountDisplay.textContent = actualAmount;
+                        accountNumberDisplay.textContent = actualAccountNumber;
+                        toggleButton.innerHTML = '<img src="eyeOn.jpeg" alt="lock" style="width: 20px; height: 20px;">';
+                    } else {
+                        amountDisplay.textContent = hiddenAmount;
+                        accountNumberDisplay.textContent = hiddenAccountNumber;
+                        toggleButton.innerHTML = '<img src="eyeOff.jpeg" alt="lock" style="width: 20px; height: 20px;">';
+                    }
+                    isHidden = !isHidden;
+                
+    
+                
+            });
+    
+            
+       
+    </script>
+</body>
+</html>
