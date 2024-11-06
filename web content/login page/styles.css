@@ -55,7 +55,7 @@ header {
 .container {
     position: relative;
     width: 400px;
-    top: 200px; /* Adjust this value depending on how much space you want from the header */
+    top: 100px; /* Adjust this value depending on how much space you want from the header */
 }
 
 .background-box {
