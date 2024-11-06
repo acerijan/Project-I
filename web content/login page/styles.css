@@ -19,10 +19,11 @@ body {
 
 header {
     width: 100%;
-    background-color: #c4c4c4;
+    background-color: #409cff;
     
     padding: 10px ;
     position:relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
     
     
